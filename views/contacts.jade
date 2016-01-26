@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div
+    table.table
+      thead
+        tr: th Contacts 
+        
+      tbody
+        each contact in contactArr
+          tr
+            td #{contact.name} 
+            td 
+              a(href='/contacts/details/' +  '#{contact.email}') Click for more Info
+              
+    br
+    h3
+      a#addContact(href="/contacts/form") Add a new contact  

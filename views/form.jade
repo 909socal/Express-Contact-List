@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div.row
+    h1 New Contact:
+  div
+  #contactInput.row
+   form#newContact.form-group
+     div.row
+       div.col-xs-6
+         label Contact name:  
+         input.form-control#name(type='text', size='55', required)
+      div.row
+        div.col-xs-6
+         label Email address: 
+         input.form-control#email(type='text', size='55', required)
+     div.row
+       div.col-xs-6
+         label Phone number: 
+         input.form-control#phone(type='text', size='55', required)
+
+     input#submit.btn.btn-danger.pull-left(type='submit', value='Submit')
+   
+     br
+     h3 
+       a(href="/contacts") Return to contact list
+
+block scripts
+  script(src="/javascripts/addContact.js")
